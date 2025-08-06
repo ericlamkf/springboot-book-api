@@ -34,49 +34,44 @@ It supports basic CRUD operations:
 ## 📦 Installation & Run
 
 ### 1. Clone the project
-```bash
+```
 git clone https://github.com/your-username/springboot-book-api.git
 cd springboot-book-api
+```
 
 2. Build the project
-bash
-Copy
-Edit
+```
 ./mvnw clean install
+```
+
 3. Run the project
-bash
-Copy
-Edit
+```
 ./mvnw spring-boot:run
+```
 4. Access the application
+```
 API base URL: http://localhost:8080
-
 H2 Console (for DB inspection): http://localhost:8080/h2-console
-
 JDBC URL: jdbc:h2:mem:testdb
-
 Username: sa
-
 Password: (leave blank)
-
+```
 🛠 API Endpoints
+```
 Method	Endpoint	Description
 GET	/books	Get all books
 POST	/books	Add a new book
 DELETE	/books/{id}	Delete book by ID
-
+```
 🔽 Sample JSON for POST
-json
-Copy
-Edit
+```
 {
   "title": "Clean Code",
   "author": "Robert C. Martin"
 }
+```
 📁 Project Structure
-cpp
-Copy
-Edit
+```
 src
 ├── main
 │   ├── java
@@ -88,7 +83,9 @@ src
 │   └── resources
 │       ├── application.properties
 │       └── static/templates (if any)
+```
 🧠 How It Works (Short Explanation)
+```
 Controller Layer (@RestController)
 Accepts HTTP requests and delegates them to the service layer.
 
@@ -100,11 +97,9 @@ Interfaces with the database using Spring Data JPA.
 
 H2 Database
 In-memory, resets on each run. Useful for testing and learning.
-
+```
 📄 Sample Model Class
-java
-Copy
-Edit
+```
 @Entity
 public class Book {
     @Id
@@ -123,27 +118,25 @@ public class Book {
 
     // Getters and Setters
 }
+```
 ✅ Lombok Note
+```
 If Lombok annotations like @Getter and @Setter do not work:
-
 Ensure your IDE supports Lombok (enable annotation processing)
-
 Or manually write the getter and setter methods
-
+```
 🙌 Author
-Created by Your Name Here
+```
+Created by Eric Lam
 Just a simple project to learn how to build RESTful APIs with Spring Boot.
-
+```
 📝 License
+```
+
 This project is open-source under the MIT License.
-
-yaml
-Copy
-Edit
-
----
-
+```
 ✅ You can now:
+```
 - Copy this into a file named `README.md` in your project root
 - Replace `your-username` in the clone URL
 - Replace **Your Name Here** if you'd like attribution
